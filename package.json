@@ -1,0 +1,28 @@
+{
+  "name": "osx.volker-rose.de",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "standard"
+  },
+  "keywords": [],
+  "author": "Volker Rose <volker.rose@gmail.com> (http://volker.rose.de/)",
+  "license": "MIT",
+  "dependencies": {
+    "next": "2.2.0",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "2.0.0",
+    "standard": "10.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
