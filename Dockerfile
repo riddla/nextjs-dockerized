@@ -4,13 +4,15 @@ RUN useradd --user-group --create-home --shell /bin/false app
 
 ENV HOME=/home/app
 
-COPY package.json npm-shrinkwrap.json $HOME/web/
+ENV APP_DIR=$HOME/web/
+
+COPY package.json npm-shrinkwrap.json $APP_DIR
 RUN chown -R app:app $HOME/*
 
 USER app
-WORKDIR $HOME/web
-RUN npm install
+
+WORKDIR $APP_DIR
+RUN rm -rf node_modules \
+  && npm install
 
 EXPOSE 3000
-
-# CMD ["npm", "run dev"]
