@@ -19,3 +19,17 @@
 ### Debug
 
 `docker-compose logs`
+
+### Installing more npm dependencies
+
+```
+docker-compose run --rm web /bin/bash`
+
+$ npm install glamorous --save
+$ exit
+
+git add package.json npm-shrinkwrap.json
+(git commit)
+
+docker-compose build
+```
